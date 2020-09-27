@@ -155,6 +155,15 @@ w.__proto__ === Word.prototype;
                 <p>惯例 → 构造函数均以大写字母开始</p>
                 <p></p>
                 <p></p>
+                <p>函数用来初始化一个新建对象（使用 new 运算符）</p>
+                <p>&nbsp;&nbsp; ↓↓ &nbsp;&nbsp;</p>
+                <p>构造函数（constructor）</p>
+                <p>&nbsp;&nbsp; ↓↓ &nbsp;&nbsp;</p>
+                <p>定义了一类对象 → 由构造函数初始化的对象组成的集合</p>
+                <p>&nbsp; ↓ &nbsp;</p>
+                <p>类：类可看作是对象类型的子类型</p>
+                <p></p>
+                <p></p>
 
 
             </el-collapse-item>
@@ -163,6 +172,11 @@ w.__proto__ === Word.prototype;
                 <p>Object 中包含了 Data、function、Array</p>
                 <p>基本类型（单类型）：除Object。 String、Number、boolean、null、undefined。</p>
                 <p>引用类型：object。里面包含的 function、Array、Date。</p>
+                <p>--------------------</p>
+                <p>js类型：</p>
+                <p>原始类型、对象类型</p>
+                <p>可以拥有方法的类型、不能拥有方法的类型</p>
+                <p>可变（mutable）类型、不可变（immutable）类型</p>
             </el-collapse-item>
             <el-collapse-item title="6、浏览器渲染过程" name="6">
                 <p>解析html以构建dom树 → 构建render树 → 布局render树 → 绘制render树</p>
@@ -534,11 +548,42 @@ console.log(maxValue)
                 <p></p>
                 <p></p>
             </el-collapse-item>
-            <el-collapse-item title="15、" name="15"></el-collapse-item>
-            <el-collapse-item title="16、" name="16"></el-collapse-item>
-            <el-collapse-item title="17、" name="17"></el-collapse-item>
-            <el-collapse-item title="18、" name="18"></el-collapse-item>
-            <el-collapse-item title="19、" name="19"></el-collapse-item>
+            <el-collapse-item title="15、js解析器内存管理机制 → 自动对内存进行垃圾回收（garbage collection）" name="15"></el-collapse-item>
+            <el-collapse-item title="16、js是面向对象语言，只有null、undefined 无法拥有方法的值" name="16"></el-collapse-item>
+            <el-collapse-item title="17、js算术运算溢出（overflow）、下溢（underflow）" name="17">
+                
+                <p>溢出（overflow）⇒ 超过 js 所能表示的数字上限 → 以无穷大（infinity）表示；超过下限 → 负无穷大（-Infinity）</p>
+                <p>下溢（underflow） ⇒ 无限接近零并比 js 能表示的最小值还小 → 返回0；负数下溢时 → “负零”</p>
+                <p>被零整除 → 无穷大或负无穷大。</p>
+                <p>零除于零 → 无意义 → 非数字（not-a-number）值 → 用 NaN 表示</p>
+                <p>js中的非数字值 → 不与任何值相等，包含自身，即 x==NaN 无法判断 x 是否为 NaN，可用 x!=x 来判断</p>
+                <p>isNaN()、isFinite()</p>
+            </el-collapse-item>
+            <el-collapse-item title="18、m模式匹配 → 正则" name="18">
+                <p>RegExp() 构造函数 → 创建文本匹配模式的对象</p>
+                <p>var str = 'testing: 1,2,3';</p>
+                <p>var reg = /\d+/g; → 匹配一个或多个数字</p>
+                <p>reg.text(str); → true</p>
+                <p>str.search(reg); → 首次匹配成功的位置</p>
+                <p>str.match(reg); → 所有匹配组成的数组</p>
+                <p>str.replace(reg, "#"); → "testing: #,#,#"</p>
+                <p>str.split(/\D+/); → 用非数字字符截取字符串</p>
+            </el-collapse-item>
+            <el-collapse-item title="19、包装对象" name="19">
+                <p>存取字符串、数字或布尔值的属性时临时创建的临时对象。</p>
+                <p>var str = "test";</p>
+                <p>str.len = 4; → 先创建一个临时字符串对象，并给其 len 属性赋值，随即销毁该对象</p>
+                <p>var t = str.len; → undefined</p>
+                <p>注：</p>
+                <p>可通过 Stirng()、Number()、Boolean()构造函数来显示创建包装对象。</p>
+                <p>如：</p>
+                <p>var s = "test"; → 一个字符串</p>
+                <p>var sObj = new String(s); → 一个字符串对象</p>
+                <p>s == sObj → true</p>
+                <p>s === sObj → false</p>
+                <p></p>
+                <p></p>
+            </el-collapse-item>
             <el-collapse-item title="20、" name="20"></el-collapse-item>
             <el-collapse-item title="21、" name="21"></el-collapse-item>
           </el-collapse>
@@ -550,7 +595,7 @@ console.log(maxValue)
         components: {  },
         data(){
             return {
-                activeNames: ['14'],
+                activeNames: ['19'],
                 isShowList: true,
                 active: '',
             };

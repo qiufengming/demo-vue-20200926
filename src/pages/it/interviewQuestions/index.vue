@@ -21,6 +21,8 @@
             </el-row>
             <el-row>
                 <js v-if="active == 'js'"></js>
+                <es6 v-if="active == 'es6'"></es6>
+                <vue v-if="active == 'vue'"></vue>
             </el-row>
         </div>
     </div>
@@ -28,12 +30,14 @@
 
 <script>
     import js from './js.vue';
+    import es6 from './es6.vue';
+    import vue from './vue.vue';
     export default {
-        components: { js },
+        components: { js, es6, vue },
         data(){
             return {
                 isShowList: false,
-                active: 'js',
+                active: 'vue',
             };
         },
         created(){
