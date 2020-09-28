@@ -34,7 +34,7 @@
                 <div class="border_radius">
                     <dl>
                         <dt><label class="name">【基础技能】</label></dt>
-                        <dd>HTML(5)、CSS(3)、LESS、JavaScript、Ajax</dd>
+                        <dd>HTML(5)、CSS(3)、LESS、JavaScript、jQuery、VUE</dd>
                         <dt><label class="name">【使用过的框架】</label></dt>
                         <dd>jQuery + Bootstrap、jQuery + Jalor、VUE + Element UI</dd>
                         <dt><label class="name">【使用过的插件】</label></dt>

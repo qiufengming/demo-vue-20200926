@@ -1,6 +1,6 @@
 <template>
     <div class="resume_wrap">
-        <version03 />
+        <version04 />
     </div>
 </template>
 
@@ -8,8 +8,9 @@
     import version01 from './version01.vue';
     import version02 from './version02.vue';
     import version03 from './version03.vue';
+    import version04 from './version04.vue';
     export default {
-        components: { version01, version02, version03 },
+        components: { version01, version02, version03, version04 },
         data(){
             return {
                 isShowList: true,
