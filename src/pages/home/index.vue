@@ -59,6 +59,7 @@
                     {name: 'React', routeName: 'react', routePath: '/it/react'},
                     {name: 'codeDemo', routeName: 'codeDemo', routePath: '/it/codeDemo'},
                     {name: 'Vue', routeName: 'vue', routePath: '/it/vue'},
+                    {name: 'Vue源码学习', routeName: 'vueCodeLearn', routePath: '/it/vueCodeLearn'},
                     {name: '面试题', routeName: 'interviewQuestions', routePath: '/it/interviewQuestions'},
                     {name: 'Kinetic.js', routeName: 'kinetic', routePath: '/it/kinetic'},
                     {name: 'jsplumb.js', routeName: 'jsplumb', routePath: '/it/jsplumb'},

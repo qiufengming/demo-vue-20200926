@@ -22,7 +22,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  store,
+  store, // 这样就能全局使用vuex了
   components: { App },
   template: '<App/>'
 })

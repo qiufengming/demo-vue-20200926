@@ -5,7 +5,9 @@
                 <span slot="label"><i class="el-icon-date"></i> 全文</span>
                 <fullText></fullText>
             </el-tab-pane>
-            <el-tab-pane label="规则" :disabled="!isRule">规则</el-tab-pane>
+            <el-tab-pane label="规则">
+                <rule></rule>
+            </el-tab-pane>
             <el-tab-pane label="相关规则">相关规则</el-tab-pane>
         </el-tabs>
     </div>
@@ -13,8 +15,9 @@
 
 <script>
     import fullText from './fullText.vue';
+    import rule from './rule.vue';
     export default {
-        components: { fullText },
+        components: { fullText, rule },
         data(){
             return {
                 mymsg: '这是第二个页面哦~',

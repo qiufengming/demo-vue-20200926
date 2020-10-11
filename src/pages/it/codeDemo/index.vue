@@ -3,6 +3,7 @@
         <div class="demo_list" v-show="!isShowDemo">
             <el-row>
                 <el-link class="name" @click="showDemo('1')">元素宽度可拉伸</el-link>
+                <el-link class="name" @click="showDemo('2')">流程图</el-link>
             </el-row>
         </div>
         <div class="demo_wrap" v-show="isShowDemo">
@@ -11,6 +12,8 @@
             </el-row>
             <el-row>
                 <elWidthChange v-if="activeDemo == '1'"></elWidthChange>
+                <flowChart v-if="activeDemo == '2'"></flowChart>
+                <vuex v-if="activeDemo == '3'"></vuex>
             </el-row>
         </div>
         <el-row>
@@ -21,12 +24,14 @@
 
 <script>
     import elWidthChange from './elWidthChange.vue';
+    import flowChart from './flowChart.vue';
+    import vuex from './vuex/index.vue';
     export default {
-        components: { elWidthChange },
+        components: { elWidthChange, flowChart, vuex },
         data(){
             return {
-                isShowDemo: false,
-                activeDemo: '',
+                isShowDemo: true,
+                activeDemo: '3',
             };
         },
         created(){

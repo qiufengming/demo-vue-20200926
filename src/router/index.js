@@ -16,12 +16,17 @@ import git from '@/pages/it/git/index'
 import react from '@/pages/it/react/index'
 import codeDemo from '@/pages/it/codeDemo/index'
 import vue from '@/pages/it/vue/index'
+import vueCodeLearn from '@/pages/it/vueCodeLearn/index'
 import travel from '@/pages/other/travel/index'
 import resume from '@/pages/works/resume/index'
 import interviewQuestions from '@/pages/it/interviewQuestions/index'
 import kinetic from '@/pages/it/kinetic/index'
 import kineticFlowCahrt from '@/pages/works/kineticjs/index'
 import jsplumb from '@/pages/it/jsplumb/index'
+import components from '@/components/index'
+import flowChart from '@/components/flowChart/index'
+import codeDemoVueXA from '@/pages/it/codeDemo/vuex/A'
+import codeDemoVueXB from '@/pages/it/codeDemo/vuex/B'
 
 Vue.use(Router)
 
@@ -94,9 +99,24 @@ export default new Router({
               component: codeDemo
             },
             {
+              path: 'codeDemo/vuex/a',
+              name: 'codeDemoVueXA',
+              component: codeDemoVueXA
+            },
+            {
+              path: 'codeDemo/vuex/b',
+              name: 'codeDemoVueXB',
+              component: codeDemoVueXB
+            },
+            {
               path: 'vue',
               name: 'vue',
               component: vue
+            },
+            {
+              path: 'vueCodeLearn',
+              name: 'vueCodeLearn',
+              component: vueCodeLearn
             },
             {
               path: 'interviewQuestions',
@@ -129,6 +149,17 @@ export default new Router({
           path: '/works/kineticFlowCahrt',
           name: 'kineticFlowCahrt',
           component: kineticFlowCahrt
+        },
+        {
+          path: '/components',
+          component: components,
+          children: [
+            {
+              path: 'flowChart',
+              name: 'flowChart',
+              component: flowChart
+            },
+          ]
         },
       ], 
     },

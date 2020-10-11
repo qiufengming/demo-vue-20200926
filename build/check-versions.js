@@ -1,6 +1,6 @@
 'use strict'
-const chalk = require('chalk')
-const semver = require('semver')
+const chalk = require('chalk') // chalk 这个包是为了使输出不再单调,添加文字背景什么的,改变字体颜色什么的,
+const semver = require('semver') // semantic versioning 语义化版本
 const packageConfig = require('../package.json')
 const shell = require('shelljs')
 

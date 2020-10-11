@@ -584,8 +584,13 @@ console.log(maxValue)
                 <p></p>
                 <p></p>
             </el-collapse-item>
-            <el-collapse-item title="20、" name="20"></el-collapse-item>
+            <el-collapse-item title="20、JavaScript 中 call()、apply()、bind() 的用法" name="20">
+                <p>https://www.runoob.com/w3cnote/js-call-apply-bind.html</p>
+            </el-collapse-item>
             <el-collapse-item title="21、" name="21"></el-collapse-item>
+            <el-collapse-item title="22、" name="22"></el-collapse-item>
+            <el-collapse-item title="23、" name="23"></el-collapse-item>
+            <el-collapse-item title="24、" name="24"></el-collapse-item>
           </el-collapse>
     </div>
 </template>
